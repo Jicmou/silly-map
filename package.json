@@ -1,0 +1,22 @@
+{
+  "name": "silly-map",
+  "version": "1.0.0",
+  "description": "Learning tests for Map Object",
+  "main": "index.js",
+  "scripts": {
+    "lint": "rm -rf dist && tsc && tslint --project ./tsconfig.json",
+    "tape": "tape ./dist/index.js | tap-dot",
+    "tdd": "chokidar 'src/**/*.ts' -c 'clear && npm run test'",
+    "test": "npm run lint && npm run tape"
+  },
+  "author": "Jean-Christophe Maigrot",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/tape": "4.2.32",
+    "chokidar-cli": "1.2.0",
+    "tap-dot": "2.0.0",
+    "tape": "4.9.1",
+    "tslint": "5.11.0",
+    "typescript": "3.0.1"
+  }
+}
